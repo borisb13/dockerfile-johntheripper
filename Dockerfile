@@ -2,7 +2,8 @@ FROM ubuntu:bionic
 LABEL maintainer "jc@phocean.net"
 
 RUN apt-get update \
-  && apt-get install -y git build-essential libssl-dev zlib1g-dev yasm libgmp-dev libpcap-dev libbz2-dev libgomp1\
+  && apt-get install -y git build-essential libssl-dev zlib1g-dev yasm libgmp-dev libpcap-dev libbz2-dev libgomp1 \
+		python \
   && adduser --disabled-login --system --no-create-home jtr \
   && git clone https://github.com/magnumripper/JohnTheRipper.git /jtr \
   && chown -R jtr /jtr \
