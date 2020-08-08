@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -x
+
+ while true
+ do
+     #display some status
+     sleep 600
+ done
