@@ -9,14 +9,7 @@ ADD start-service /root/start-service
 ENV HOME /root
 
 RUN chmod +x /root/init-docker && \
-    chmod +x /root/start-service && \
-    apt-get update && \
-    apt-get clean && \
-	apt-get -y update && 
-	apt-get install -y locales curl openvpn zip unzip bridge-utils && \
-    mkdir -p /dev/net && \
-    mknod /dev/net/tun c 10 200 && \
-    chmod 600 /dev/net/tun
+    chmod +x /root/start-service
 
 RUN apt-get update \
   && apt-get install -y git build-essential libssl-dev zlib1g-dev yasm libgmp-dev libpcap-dev libbz2-dev libgomp1 \
